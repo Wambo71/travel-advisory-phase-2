@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
 const API_URL = "http://localhost:3000/userNotes";
 
 function UserNote() {

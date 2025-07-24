@@ -1,1 +1,99 @@
-""
+/* Container for all notes */
+.notes-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f9f9f9 60%, #e3eafc 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  border: 1px solid #e0e0e0;
+}
+
+/* Title styling */
+.notes-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3a4b;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+/* Each note card */
+.note-card {
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(60, 100, 180, 0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.note-card:hover {
+  box-shadow: 0 6px 24px rgba(60, 100, 180, 0.18);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Note details */
+.note-label {
+  font-weight: 600;
+  color: #3b82f6;
+  margin-right: 0.5rem;
+}
+
+.note-value {
+  color: #374151;
+}
+
+.note-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Date and type styling */
+.note-meta {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+/* Delete button styling */
+.delete-btn {
+  background: linear-gradient(90deg, #ef4444 60%, #f59e42 100%);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(239,68,68,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #b91c1c 60%, #f59e42 100%);
+  box-shadow: 0 4px 16px rgba(239,68,68,0.18);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .notes-container {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+  .note-card {
+    padding: 1rem;
+  }
+  .delete-btn {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
