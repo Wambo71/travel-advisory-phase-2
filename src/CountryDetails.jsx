@@ -1,15 +1,15 @@
 import React,{useEffect ,useState} from "react";
 
-const API_URL = "https:localhost:3000/countries";
+const API_URL = "http://localhost:3000/countries";
 
 
 const CountryDetails = () => {
-    const[country,setCountry] = useState()
+    const[countries,setCountries] = useState([])
 
       useEffect (() => {
         fetch(API_URL)
             .then((response) => response.json())
-            .then((data) => { setCountry(data);
+            .then((data) => { setCountries(data);
             })
             .catch((error) => {
                 console.error("Error fetching country data:", error);
@@ -18,13 +18,15 @@ const CountryDetails = () => {
 
   return (
       <div>
-        <h1>Country details</h1>
-        <p> {country.name}</p>
-        <p>Region:{country.region}</p>
-        <p>Advisory:{country.advisory}</p>
-
+        {countries.map((country) => (
+          <div key={country.id}>
+            <p>{country.name}</p>
+            <p>Region: {country.region}</p>
+            <p>Advisory: {country.advisory}</p>
+          </div>
+        ))}
       </div>
-  )
+  );
 }
 
 export default CountryDetails
