@@ -24,29 +24,29 @@ function UserNote() {
   };
 
   return (
-    <div className="notes-container">
-      <h2 className="notes-title">Travel Notes from Other Users</h2>
+    <div className="user-notes-container">
+      <h2 className="user-notes-title">Travel Notes from Other Users</h2>
       {notes.length === 0 ? (
         <p>No notes submitted yet.</p>
       ) : (
         notes.map((note) => (
-          <div key={note.id} className="note-card">
-            <div className="note-row">
-              <span className="note-label">Name:</span>
-              <span className="note-value">{note.name}</span>
+          <div key={note.id} className="user-note-card">
+            <div className="user-note-row">
+              <span className="user-note-label">Name:</span>
+              <span className="user-note-value">{note.name}</span>
             </div>
-            <div className="note-row">
-              <span className="note-label">Country:</span>
-              <span className="note-value">{note.country}</span>
+            <div className="user-note-row">
+              <span className="user-note-label">Country:</span>
+              <span className="user-note-value">{note.country}</span>
             </div>
-            <div className="note-row">
-              <span className="note-label">Note:</span>
-              <span className="note-value">{note.note}</span>
+            <div className="user-note-row">
+              <span className="user-note-label">Note:</span>
+              <span className="user-note-value">{note.note}</span>
             </div>
-            <div className="note-meta">
+            <div className="user-note-meta">
               Date: {note.date} | Type: {note.type}
             </div>
-            <button className="delete-btn" onClick={() => handleDelete(note.id)}>
+            <button className="user-delete-btn" onClick={() => handleDelete(note.id)}>
               Delete note
             </button>
           </div>
