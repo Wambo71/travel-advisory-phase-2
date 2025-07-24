@@ -3,17 +3,15 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Navbar.css'
 
 function Navbar() {
   return (
-    <nav>
-        
-            <ul>
-                <li><NavLink to= {"./about"}>About</NavLink></li>
-                <li><NavLink to={"./country-details"}>CountryDetails</NavLink></li>
-                <li><NavLink to={"./country-list"}>CountryList</NavLink></li>
-            </ul>
-        
+    <nav className='Nav'>
+         <NavLink to= "./about">About</NavLink>
+         <NavLink to="./country-details">CountryDetails</NavLink>
+         <NavLink to="./country-list">CountryList</NavLink>   
+         <NavLink to="./form">TravelNoteForm</NavLink>        
     </nav>
   )
 }

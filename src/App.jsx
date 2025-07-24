@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navbar from './Navbar'
 import About from './pages/About'
 import CountryDetails from './CountryDetails'
-import Dashboard from './layout/Dashboard'
+import TravelNoteForm from './TravelNoteForm'
 import CountryList from './components/CountryList'
+import UserNote from './UserNote'
 
 
 const App = () => {
@@ -13,11 +14,12 @@ const App = () => {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Dashboard />}>
-          <Route path="about" element={<About />} />
-          <Route path="/country-details" element={<CountryDetails />} />
-          <Route path="country-list" element={<CountryList />} />
-        </Route>
+        <Route path="/" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/country-details" element={<CountryDetails />} />
+        <Route path="/country-list" element={<CountryList />} />  
+        <Route path="/form" element={<TravelNoteForm />} />  
+        <Route path="/user-note" element={<UserNote />} />
       </Routes>
     </div>
     

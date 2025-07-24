@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import { Link } from "react-router-dom";
+
 const API_URL = "http://localhost:3000/userNotes";
 
 function TravelNoteForm() {
@@ -95,9 +97,10 @@ function TravelNoteForm() {
         <option value="transport">Transport</option>
       </select>
 
+     <Link to="/user-note">
       <button className="travel-form-btn" type="submit">
         Submit Note
-      </button>
+      </button> /</Link>
     </form>
   );
 }
