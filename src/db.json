@@ -1,0 +1,132 @@
+{
+    "countries": [
+        {
+            "id": 1,
+            "name": "United States",
+            "region": "North America",
+            "advisory": "Exercise increased caution due to crime."
+
+        },
+        {
+            "id": 2,
+            "name": "Canada",
+            "region": "North America",
+            "advisory": "Exercise normal precautions."
+        },
+        {
+            "id": 3,
+            "name": "Mexico",
+            "region": "North America",
+            "advisory": "Reconsider travel due to crime and kidnapping."
+        },
+        {
+            "id": 4,
+            "name": "Brazil",
+            "region": "South America",
+            "advisory": "Exercise increased caution due to crime."
+            
+           
+        },
+        {
+            "id": 5,
+            "name": "Japan",
+            "region": "Asia",
+            "advisory":"Exercise normal precautions."
+        },
+        {
+            "id": 6,
+            "name": "Germany",
+            "region": "Europe",
+            "advisory": "Exercise normal precautions."
+        },
+        {
+            "id": 7,
+            "name": "Australia",
+            "region": "Oceania",
+            "advisory": "Exercise normal precautions."
+        },
+        {
+            "id": 8,
+            "name": "South Africa",
+            "region": "Africa",
+            "advisory": "Reconsider travel due to crime."
+        },
+        {
+            "id": 9,
+            "name": "India",
+            "region": "Asia",
+           "advisory": "Exercise increased caution due to crime"
+        },
+        {
+            "id": 10,
+            "name": "Kenya",
+            "region": "Africa",
+            "advisory": "Reconsider travel due to crime"
+            
+        }     
+    ],
+     "userNotes": [
+
+        {
+            "id": 1,
+            "name": "Brian",
+            "country": "United States",
+            "note": "Visited New York City, had a great time!"
+        },
+        {
+            "id": 2,
+            "name": "Alice",
+            "country": "Canada",
+            "note": "Be cautious in Canada City, especially at night."
+        },
+        {
+            "id": 3,
+            "name":"Carlos", 
+            "country": "Mexico",
+            "note": "Mexico is amazing, very safe and clean."
+        },
+        {
+            "id": 4,
+            "name": "Wambui",
+            "country": "Brazil",
+            "note": "Brazil is very safe, public transport is excellent."
+        },
+        {
+            "id": 5,
+            "name": "Sam",
+            "country": "Germany",
+            "note": "Berlin is a must-visit, very friendly people."
+        },
+        {
+            "id": 6,
+            "name": "Emma",
+            "country": "Australia",
+            "note": "Sydney is beautiful, but watch out for the sun!"
+        },
+        {
+            "id": 7,
+            "name": "Siphon",
+            "country": "South Africa",
+            "note": "Cape Town is stunning, but be aware of your surroundings."
+        },
+        {
+            "id": 8,
+            "name": "Raj",
+            "country": "India",
+            "note": "India is vibrant and diverse, but be cautious in crowded areas."
+        },
+        {
+            "id": 9,
+            "name":"Wanjiru", 
+            "country": "Kenya",
+            "note":"Nairobi has great wildlife parks, but stay alert."
+        },
+        {
+            "id": 10,
+            "name": "John",
+            "country": "Canada",
+            "note": "Toronto is very multicultural and welcoming."
+        }
+     ]
+}
+
