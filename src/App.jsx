@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 import About from './pages/About'
 import CountryDetails from './CountryDetails'
 import Dashboard from './layout/Dashboard'
-import CountryList from './CountryList'
+import CountryList from './components/CountryList'
 
 
 const App = () => {
