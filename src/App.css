@@ -1,16 +1,31 @@
+/* General Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+  background-color: lightskyblue;
+  color: black;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 1rem;
+}
 /* Container for all notes */
-.notes-container {
+.user-notes-container {
   max-width: 700px;
   margin: 3rem auto;
   padding: 2rem;
-  background: linear-gradient(135deg, #f9f9f9 60%, #e3eafc 100%);
+  background: #e0e0e0;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  border: 1px solid #e0e0e0;
+  border: 1px solid #dbeafe;
 }
 
 /* Title styling */
-.notes-title {
+.user-notes-title {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
@@ -20,8 +35,8 @@
 }
 
 /* Each note card */
-.note-card {
-  background: #fff;
+.user-note-card {
+  background: white;
   border: 1px solid #dbeafe;
   border-radius: 10px;
   margin-bottom: 1.5rem;
@@ -37,31 +52,31 @@
 }
 
 /* Note details */
-.note-label {
+.user-note-label {
   font-weight: 600;
   color: #3b82f6;
   margin-right: 0.5rem;
 }
 
-.note-value {
+.user-note-value {
   color: #374151;
 }
 
-.note-row {
+.user-note-row {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
 }
 
 /* Date and type styling */
-.note-meta {
+.user-note-meta {
   font-size: 0.95rem;
   color: #64748b;
   margin-top: 0.5rem;
 }
 
 /* Delete button styling */
-.delete-btn {
+.user-delete-btn {
   background: linear-gradient(90deg, #ef4444 60%, #f59e42 100%);
   color: #fff;
   border: none;
@@ -84,14 +99,14 @@
 
 /* Responsive design */
 @media (max-width: 600px) {
-  .notes-container {
+  .user-notes-container {
     padding: 1rem;
     max-width: 98vw;
   }
-  .note-card {
+  .user-note-card {
     padding: 1rem;
   }
-  .delete-btn {
+  .user-delete-btn {
     right: 1rem;
     bottom: 1rem;
     padding: 0.5rem 1rem;

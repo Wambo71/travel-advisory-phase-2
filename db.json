@@ -115,14 +115,6 @@
       "name": "John",
       "country": "Canada",
       "note": "Toronto is very multicultural and welcoming."
-    },
-    {
-      "id": "5aa1",
-      "name": "Bynum",
-      "country": "Egypt",
-      "note": "i wanna explorethe history of egypt",
-      "date": "2025-07-25",
-      "type": "safety"
     }
   ]
 }
