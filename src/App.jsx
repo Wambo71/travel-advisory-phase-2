@@ -1,3 +1,4 @@
+
 import React from 'react'
 import{Routes, Route} from 'react-router-dom'
 import Navbar from './Navbar'
@@ -24,3 +25,4 @@ const App = () => {
 }
 
 export default App
+
