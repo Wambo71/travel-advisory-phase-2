@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+const API_URL = "http://localhost:3000/UserNotes"
 
 function TravelNoteForm() {
   const [formData, setFormData] = useState({
     name: "",
     country: "",
-    note: ""
+    note: "",
+    date:"",
+    recommend:false,
+    type:""
   });
 
   const handleChange = (e) => {
@@ -17,7 +21,7 @@ function TravelNoteForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3001/userNotes", {
+    fetch("http://localhost:3000/userNotes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -27,7 +31,7 @@ function TravelNoteForm() {
       .then((res) => res.json())
       .then((newNote) => {
         alert("Thank you! Your note has been submitted.");
-        setFormData({ name: "", country: "", note: "" }); // Clear form
+        setFormData({ name: "", country: "", note: "" }); 
       })
       .catch((error) => {
         console.error("Error submitting note:", error);
