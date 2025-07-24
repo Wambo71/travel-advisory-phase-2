@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import CountryCard from './CountryCard';
 
 function CountryList() {
-  const [country, setCountry] = useState([]);
+  const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch('http://localhost:3000/countries')
       .then((res) => res.json())
       .then((data) => {
-        setNotes(data);
+        setCountries(data);
         setLoading(false);
       })
       .catch((err) => {
@@ -22,7 +22,7 @@ function CountryList() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {notes.map((countries) => (
+      {countries.map((country) => (
         <CountryCard key={country.id} country={country} />
       ))}
     </div>
