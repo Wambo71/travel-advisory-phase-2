@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CountryCard from './CountryCard';
 
 function CountryList() {
-  const [country, setcountry] = useState([]);
+  const [country, setCountry] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
