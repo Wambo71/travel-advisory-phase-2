@@ -7,7 +7,6 @@ function TravelNoteForm() {
     country: "",
     note: "",
     date:"",
-    recommend:false,
     type:""
   });
 
@@ -42,8 +41,8 @@ function TravelNoteForm() {
     <div style={{ padding: "20px" }}>
       <h2>Submit Your Travel Advice</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          Your Name:
+        <label htmlFor="name">name</label>
+
           <input
             type="text"
             name="name"
@@ -51,10 +50,9 @@ function TravelNoteForm() {
             onChange={handleChange}
             required
           />
-        </label>
-        <br /><br />
-        <label>
-          Country:
+          <br />
+        <label htmlFor="country">country</label>
+        
           <input
             type="text"
             name="country"
@@ -62,10 +60,9 @@ function TravelNoteForm() {
             onChange={handleChange}
             required
           />
-        </label>
-        <br /><br />
-        <label>
-          Travel Note:
+
+          <br />
+        <label htmlFor="travel note">travel note</label>
           <textarea
             name="note"
             value={formData.note}
@@ -73,8 +70,24 @@ function TravelNoteForm() {
 
             required
           />
-        </label>
-        <br /><br />
+          <br />
+          <label htmlFor="date">date</label>
+          <input 
+          type="date" 
+          value={formData.date}
+          onChange= {handleChange}
+          required
+          />
+
+          <label htmlFor="advisory type">advisory type</label>
+          <select name="type" value={formData.type} onChange={handleChange}></select>
+
+          <option value="">select</option>
+          <option value="safety">Safety</option>
+          <option value="health">Health</option>
+          <option value="transport">Transport</option>
+
+        
         <button type="submit">Submit Note</button>
       </form>
     </div>
