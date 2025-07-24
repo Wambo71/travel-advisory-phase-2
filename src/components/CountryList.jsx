@@ -6,7 +6,7 @@ function CountryList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3001/countries')
+    fetch('http://localhost:3000/countries')
       .then((res) => res.json())
       .then((data) => {
         setNotes(data);
