@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import "./App.css"; 
-const API_URL = "http://localhost:3000/UserNotes"
+import React, { useState } from "react";
+import "./App.css";
+const API_URL = "http://localhost:3000/userNotes";
 
 function TravelNoteForm() {
   const [formData, setFormData] = useState({
@@ -8,30 +8,30 @@ function TravelNoteForm() {
     country: "",
     note: "",
     date: "",
-    type:"",
+    type: "",
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:3000/userNotes", {
+    fetch(API_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
       .then((res) => res.json())
       .then((newNote) => {
         alert("Thank you! Your note has been submitted.");
-        setFormData({ name: "", country: "", note: "" , date: "", type: "" }); 
+        setFormData({ name: "", country: "", note: "", date: "", type: "" });
       })
       .catch((error) => {
         console.error("Error submitting note:", error);
@@ -39,61 +39,66 @@ function TravelNoteForm() {
   };
 
   return (
-    <div>
-      <h2>Submit Your Travel Advice</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">name</label>
+    <form className="travel-form-container" onSubmit={handleSubmit}>
+      <h2 className="travel-form-title">Submit Your Travel Advice</h2>
+      
+      <label className="travel-form-label" htmlFor="name">Name</label>
+      <input
+        className="travel-form-input"
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
 
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <br />
-        <label htmlFor="country">country</label>
-        
-          <input
-            type="text"
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-            required
-          />
+      <label className="travel-form-label" htmlFor="country">Country</label>
+      <input
+        className="travel-form-input"
+        type="text"
+        name="country"
+        value={formData.country}
+        onChange={handleChange}
+        required
+      />
 
-          <br />
-        <label htmlFor="travel note">travel note</label>
-          <textarea
-            name="note"
-            value={formData.note}
-            onChange={handleChange}
+      <label className="travel-form-label" htmlFor="note">Travel Note</label>
+      <textarea
+        className="travel-form-textarea"
+        name="note"
+        value={formData.note}
+        onChange={handleChange}
+        required
+      />
 
-            required
-          />
-          <br />
+      <label className="travel-form-label" htmlFor="date">Date</label>
+      <input
+        className="travel-form-input"
+        type="date"
+        name="date"
+        value={formData.date}
+        onChange={handleChange}
+        required
+      />
 
-          <label htmlFor="date">date</label>
-          <input 
-          type="date" 
-          name="date"
-          value={formData.date}
-          onChange= {handleChange}
-          required
-          />
-            <br />
-          <label htmlFor="advisory type">advisory type</label>
-          <select name="type" value={formData.type} onChange={handleChange}>
-          <option value="">select</option>
-          <option value="safety">Safety</option>
-          <option value="health">Health</option>
-          <option value="transport">Transport</option>
-          </select>
-            <br />
-        
-        <button type="submit">Submit Note</button>
-      </form>
-    </div>
+      <label className="travel-form-label" htmlFor="type">Advisory Type</label>
+      <select
+        className="travel-form-input"
+        name="type"
+        value={formData.type}
+        onChange={handleChange}
+        required
+      >
+        <option value="">Select</option>
+        <option value="safety">Safety</option>
+        <option value="health">Health</option>
+        <option value="transport">Transport</option>
+      </select>
+
+      <button className="travel-form-btn" type="submit">
+        Submit Note
+      </button>
+    </form>
   );
 }
 
