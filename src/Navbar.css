@@ -1,4 +1,19 @@
-.Nav {
-    display: flex;
-    justify-content: space-between;
+.navbar {
+  background: #f0f4ff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+}
+
+.navbar a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
