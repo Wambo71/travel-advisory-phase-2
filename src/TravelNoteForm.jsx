@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Link } from "react-router-dom";
 
 const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"
 
@@ -12,6 +11,7 @@ function TravelNoteForm() {
     date: "",
     type: "",
   });
+
 
   const handleChange = (e) => {
     setFormData({
@@ -32,7 +32,8 @@ function TravelNoteForm() {
     })
       .then((res) => res.json())
       .then((newNote) => {
-        alert("Thank you! Your note has been submitted.");
+        
+         
         setFormData({ name: "", country: "", note: "", date: "", type: "" });
       })
       .catch((error) => {
@@ -41,6 +42,7 @@ function TravelNoteForm() {
   };
 
   return (
+    <>
     <form className="travel-form-container" onSubmit={handleSubmit}>
       <h2 className="travel-form-title">Submit Your Travel Advice</h2>
       
@@ -97,12 +99,14 @@ function TravelNoteForm() {
         <option value="transport">Transport</option>
       </select>
 
-     <Link to="/user-note">
       <button className="travel-form-btn" type="submit">
         Submit Note
-      </button> /</Link>
+      </button>
+           
     </form>
+    </>
   );
+ 
 }
 
-export default TravelNoteForm;
+export default TravelNoteForm

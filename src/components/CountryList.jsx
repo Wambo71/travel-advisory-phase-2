@@ -23,7 +23,7 @@ function CountryList() {
   if (loading) return <p>Loading countries...</p>;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div >
       {countries.map((country) => (
         <CountryCard key={country.id} country={country} />
       ))}

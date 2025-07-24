@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-const API_URL = "http://localhost:3000/userNotes";
+
+const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"
 
 function UserNote() {
   const [notes, setNotes] = useState([]);
