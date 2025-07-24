@@ -12,6 +12,7 @@ import UserNote from './UserNote'
 const App = () => {
   return (
     <div>
+      <h3>TRAVEL ADVISORY APP</h3>
       <Navbar />
       <Routes>
         <Route path="/" element={<About />} />

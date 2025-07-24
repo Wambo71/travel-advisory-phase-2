@@ -5,7 +5,7 @@ function CountryCard({ country }) {
     <div className="border p-4 rounded-lg shadow hover:shadow-md mb-4">
       <h2 className="text-lg font-bold">{country.name}</h2>
       <p><strong>Region:</strong> {country.region}</p>
-      <p className="mt-2 text-gray-700"><strong>Advisory:</strong> {country.advisory}</p>
+     
     </div>
   );
 }

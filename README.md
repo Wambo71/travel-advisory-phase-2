@@ -55,6 +55,12 @@ The app allows users to:
 
      -Netlify (deployment)
 
+  ### Deployment
+    - you can access backend API at
+
+        []
+
+
 
   ### License
       Copyright (c) 2025 Wambui

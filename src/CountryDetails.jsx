@@ -21,7 +21,7 @@ const CountryDetails = () => {
         {countries.map((country) => (
           <div key={country.id}>
             <p>{country.name}</p>
-            <p>Region: {country.region}</p>
+            
             <p>Advisory: {country.advisory}</p>
           </div>
         ))}

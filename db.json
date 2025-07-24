@@ -4,61 +4,61 @@
       "id": "1",
       "name": "United States",
       "region": "North America",
-      "advisory": "Exercise increased caution due to crime."
+      "advisory": "Exercise increased caution due to crime.Terrorism is a concern in some areas.Locations that are popular with foreigners and tourists have higher levels of violent crimes"
     },
     {
       "id": "2",
       "name": "Canada",
       "region": "North America",
-      "advisory": "Exercise normal precautions."
+      "advisory": "Exercise normal precautions.Canada is generally a safe place destination for travelers.The crime rate in Canada is lower than that in United Kingdom.Canada offers the best newcomwer services in the world"
     },
     {
       "id": "3",
       "name": "Mexico",
       "region": "North America",
-      "advisory": "Reconsider travel due to crime and kidnapping."
+      "advisory": "Reconsider travel due to crime and kidnapping.Some regions are advising against non-essential travel.Avoid travelling at night on major cities or poorly maintained roads.Be aware of petty crimes including pickpocketing and drink spiking"
     },
     {
       "id": "4",
       "name": "Brazil",
       "region": "South America",
-      "advisory": "Exercise increased caution due to crime."
+      "advisory": "Exercise increased caution due to crime.Brazil is a large country with diverse regions and varying levels of safety.While many areas are safe for tourists, some regions have higher crime rates and should be approached with caution."
     },
     {
       "id": "5",
       "name": "Japan",
       "region": "Asia",
-      "advisory": "Exercise normal precautions."
+      "advisory": "Exercise normal precautions.Also consult with a doctor or travel clinic before traveling to Japan, especially if you have specific health concerns or pre-existing conditions.Japan is generally a safe country for travelers, with low crime rates and excellent healthcare facilities."
     },
     {
       "id": "6",
       "name": "Germany",
       "region": "Europe",
-      "advisory": "Exercise normal precautions."
+      "advisory": "Exercise normal precautions. Germany is generally a safe country for travelers, with low crime rates and excellent healthcare facilities. However, like any other country, it is important to be aware of your surroundings and take basic safety precautions.Be cautious of online scams"
     },
     {
       "id": "7",
       "name": "Australia",
       "region": "Oceania",
-      "advisory": "Exercise normal precautions."
+      "advisory": "Exercise normal precautions.Non Austalian citizens need to apply for a visa before traveling to Australia. The visa application process can take time, so it is advisable to apply well in advance of your travel date. Australia is generally a safe country for travelers, with low crime rates and excellent healthcare facilities."
     },
     {
       "id": "8",
       "name": "South Africa",
       "region": "Africa",
-      "advisory": "Reconsider travel due to crime."
+      "advisory": "Reconsider travel due to crime. South Africa is a diverse country with varying levels of safety. While many areas are safe for tourists, some regions have higher crime rates and should be approached with caution. It is advisable to stay informed about the current security situation in the specific areas you plan to visit."
     },
     {
       "id": "9",
       "name": "India",
       "region": "Asia",
-      "advisory": "Exercise increased caution due to crime"
+      "advisory": "Exercise increased caution due to crime.Avoid traveling alone at night, especially in rural areas or less populated regions. India is a diverse country with varying levels of safety. Respect local customs and traditions, especially in religious or culturally significant areas. Be cautious of scams and fraudulent activities targeting tourists."
     },
     {
       "id": "10",
       "name": "Kenya",
       "region": "Africa",
-      "advisory": "Reconsider travel due to crime"
+      "advisory": "Reconsider travel due to crime.Violent crime, such as armed robbery, carjacking, and home invasion, can occur in urban areas. Petty crime, such as pickpocketing and bag snatching, is also common in crowded places. Be cautious of wildlife encounters, especially in national parks and reserves."
     }
   ],
   "userNotes": [

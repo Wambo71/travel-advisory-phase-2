@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import CountryCard from './CountryCard';
 
+const API_URL = "https://travel-backend-kbq2.onrender.com/countries";
+
 function CountryList() {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3000/countries')
+    fetch(API_URL)
       .then((res) => res.json())
       .then((data) => {
         setCountries(data);
