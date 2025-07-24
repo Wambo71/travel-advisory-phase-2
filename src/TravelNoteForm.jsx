@@ -7,7 +7,7 @@ function TravelNoteForm() {
     country: "",
     note: "",
     date: "",
-    type:""
+    type:"",
   });
 
   const handleChange = (e) => {
@@ -30,7 +30,7 @@ function TravelNoteForm() {
       .then((res) => res.json())
       .then((newNote) => {
         alert("Thank you! Your note has been submitted.");
-        setFormData({ name: "", country: "", note: "" }); 
+        setFormData({ name: "", country: "", note: "" , date: "", type: "" }); 
       })
       .catch((error) => {
         console.error("Error submitting note:", error);

@@ -11,6 +11,17 @@ function UserNote() {
       .catch((error) => console.error("Error fetching notes:", error));
   }, []);
 
+  const handleDelete = (id) => {
+    fetch(`${API_URL}/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setNotes(notes.filter((note) => note.id !== id));
+      })
+      .catch((error) => console.error("Error deleting note:", error));
+  };
+
   return (
     <div>
       <h2>Travel Notes from Other Users</h2>
@@ -19,10 +30,18 @@ function UserNote() {
       ) : (
         notes.map((note) => (
           <div key={note.id}>
-            <p>{note.content}</p>
+            <p> Name:{note.name}</p>
+            <p>Country:{note.country}</p>
+            <p>Note:{note.note}</p>
+            <p>Date:{note.date}</p>
+            <p>type:{note.type}</p>
+            
+  
+     <button onClick={() => handleDelete(note.id)}>Delete note</button>
           </div>
         ))
       )}
+     
     </div>
     );
   }

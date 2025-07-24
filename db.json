@@ -63,12 +63,6 @@
   ],
   "userNotes": [
     {
-      "id": "1",
-      "name": "Brian",
-      "country": "United States",
-      "note": "Visited New York City, had a great time!"
-    },
-    {
       "id": "2",
       "name": "Alice",
       "country": "Canada",
@@ -121,20 +115,6 @@
       "name": "John",
       "country": "Canada",
       "note": "Toronto is very multicultural and welcoming."
-    },
-    {
-      "id": "aeac",
-      "name": "Bynum",
-      "country": "kenya",
-      "note": "ydugui",
-      "date": "2025-07-16",
-      "type": "safety"
-    },
-    {
-      "id": "725e",
-      "name": "Bynum",
-      "country": "kenya",
-      "note": "good climate"
     }
   ]
 }
