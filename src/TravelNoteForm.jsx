@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:3000/userNotes";
+const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"
 
 function TravelNoteForm() {
   const [formData, setFormData] = useState({

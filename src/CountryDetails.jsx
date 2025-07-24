@@ -1,6 +1,6 @@
 import React,{useEffect ,useState} from "react";
 
-const API_URL = "http://localhost:3000/countries";
+const API_URL = "https://travel-backend-kbq2.onrender.com/countries"
 
 
 const CountryDetails = () => {
