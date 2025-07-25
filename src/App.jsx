@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Navbar from './Navbar'
+import About from './pages/About'
+import CountryDetails from './CountryDetails'
+import TravelNoteForm from './TravelNoteForm'
+import CountryList from './components/CountryList'
+import UserNote from './UserNote'
 
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   
+    <div>
+      <h3>TRAVEL ADVISORY APP</h3>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/country-details" element={<CountryDetails />} />
+        <Route path="/country-list" element={<CountryList />} />  
+        <Route path="/form" element={<TravelNoteForm />} />  
+        <Route path="/user-note" element={<UserNote />} />
+      </Routes>
+    </div>
+   
+    
   )
 }
 
 export default App
+
