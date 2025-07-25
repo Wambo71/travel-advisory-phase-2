@@ -17,12 +17,12 @@ const CountryDetails = () => {
     }, []);
 
   return (  // Rendering the list of countries with their advisories
-      <div>
+      <div className="details-container">
         {countries.map((country) => (   // Mapping through the countries array to display each country's details
-          <div key={country.id}>
+          <div className="country-card" key={country.id}>
             <p>{country.name}</p>
             
-            <p>Advisory: {country.advisory}</p>
+            <p className="country-advisory">Advisory: {country.advisory}</p>
           </div>
         ))}
       </div>
