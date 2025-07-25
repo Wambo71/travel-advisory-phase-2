@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
+import { useNavigate } from "react-router-dom";
 
-const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"
+
+
+
+const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"   // API endpoint to submit travel notes
 
 function TravelNoteForm() {
-  const [formData, setFormData] = useState({
+
+  const [formData, setFormData] = useState({  // state to manage form data
+    // Initializing the form fields
     name: "",
     country: "",
     note: "",
@@ -12,36 +18,40 @@ function TravelNoteForm() {
     type: "",
   });
 
-
+   const navigate = useNavigate();  //a hook to navigate to another page after form submission
+  
+   
   const handleChange = (e) => {
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      ...formData,  // Spread operator to keep existing form data
+      [e.target.name]: e.target.value,  //updtaes the field that changed
     });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();   // prevents form reload
 
-    fetch(API_URL, {
+    fetch(API_URL, {   // Submitting the form data to the API
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json",   // means we are sending JSON data
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData),  // Convert form data to JSON string
     })
       .then((res) => res.json())
       .then((newNote) => {
-        
+         alert("Note submitted successfully!");
          
-        setFormData({ name: "", country: "", note: "", date: "", type: "" });
+        setFormData({ name: "", country: "", note: "", date: "", type: "" });  // clear the form text areas after submission
+
+          navigate("/user-note");  //navigate to the user note page
       })
       .catch((error) => {
         console.error("Error submitting note:", error);
       });
   };
 
-  return (
+  return (  //renders the form for submitting travel notes
     <>
     <form className="travel-form-container" onSubmit={handleSubmit}>
       <h2 className="travel-form-title">Submit Your Travel Advice</h2>
@@ -98,7 +108,7 @@ function TravelNoteForm() {
         <option value="health">Health</option>
         <option value="transport">Transport</option>
       </select>
-
+      
       <button className="travel-form-btn" type="submit">
         Submit Note
       </button>

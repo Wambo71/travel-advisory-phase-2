@@ -94,3 +94,81 @@ main, .app-container {
 .travel-form-btn:hover {
   background-color: #1d4ed8;
 }
+
+
+/* Container */
+.user-notes-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f7fa;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.user-notes-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Each Note Card */
+.user-note-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-left: 6px solid #3498db;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.user-note-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+}
+
+/* Row Styling */
+.user-note-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.user-note-label {
+  font-weight: bold;
+  color: #555;
+  width: 80px;
+}
+
+.user-note-value {
+  color: #333;
+  flex: 1;
+  word-wrap: break-word;
+}
+
+/* Meta Info (Date and Type) */
+.user-note-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Delete Button */
+.user-delete-btn {
+  margin-top: 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.user-delete-btn:hover {
+  background-color: #c0392b;
+}

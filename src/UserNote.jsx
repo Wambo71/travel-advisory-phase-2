@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"
+const API_URL = "https://travel-backend-kbq2.onrender.com/userNotes"  // API endpoint to fetch user notes
 
 function UserNote() {
+  //state to manage user notes
   const [notes, setNotes] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => {  // fetches notes from api
     fetch(API_URL)
       .then((res) => res.json())
       .then((data) => setNotes(data))
       .catch((error) => console.error("Error fetching notes:", error));
   }, []);
 
-  const handleDelete = (id) => {
+  const handleDelete = (id) => { // function to delete a note by id
     fetch(`${API_URL}/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then(() => {
-        setNotes(notes.filter((note) => note.id !== id));
+      .then(() => { 
+        setNotes(notes.filter((note) => note.id !== id)); //remove the deleted note from the state
       })
       .catch((error) => console.error("Error deleting note:", error));
   };
