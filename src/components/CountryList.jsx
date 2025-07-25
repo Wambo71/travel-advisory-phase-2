@@ -13,6 +13,7 @@ function CountryList() {
     fetch(API_URL)
       .then((res) => res.json())  // convert response to JSON
       .then((data) => {
+       
         setCountries(data);  //store data in state
 
         setLoading(false);
@@ -22,16 +23,21 @@ function CountryList() {
         setLoading(false);
       });
   }, []); // runs only once after render
+     
+     
 
   if (loading) return <p>Loading countries...</p>;// if the data is still loading, show a loading message
 
-  return ( // renders a list of countries using the CountryCard component
-    <div >
+return ( // renders a list of countries using the CountryCard component
+  <div>
+    <h1>Countries</h1>
+    <div className="country-list">
       {countries.map((country) => (
-        <CountryCard key={country.id} country={country} />
+        <CountryCard key={country.id } country={country} />
       ))}
     </div>
-  );
+  </div>
+);
 }
 
 export default CountryList;
